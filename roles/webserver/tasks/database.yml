@@ -1,6 +1,12 @@
 ---
 - name: Login User Database
-  mysql_user: user=root password=F@1zur@@studyroom2308000 priv=*.*:ALL state=resent
+  mysql_user: 
+          user: root
+          password: F@1zur@@studyroom2308000
+          priv: *.*:ALL
+          state: resent
 
 - name: Create Database
-  mysql_db: db=splti state=present
+  mysql_db: 
+        db: splti
+        state: present

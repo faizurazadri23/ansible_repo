@@ -1,5 +1,5 @@
 ---
-- name: Install WebServer
+- name: Create Database
   hosts: webserver
   gather_facts: false
   become: true
