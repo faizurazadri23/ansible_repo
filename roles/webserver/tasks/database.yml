@@ -3,7 +3,7 @@
   yum: name=python-pip state=present
 
 - name: Create database user
-  mysql_user: user=root password=F@1zur@@studyroom2308000 priv=*.*:ALL state=present
+  mysql_user: user=root password=F@1zur@@studyroom2308000 priv=*.*:ALL state=present login_unix_socket=/var/lib/mysql/mysql.sock
 
 - name: Create Database
   mysql_db: db=splti state=present
