@@ -3,6 +3,7 @@
   yum: name=python-pip state=present
 
 - name: Create database user
+  no_log: true
   mysql_user:
       name: root
       password: F@1zur@@studyroom2308000
