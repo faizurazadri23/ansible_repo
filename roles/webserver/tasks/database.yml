@@ -1,6 +1,6 @@
 ---
-- name: Login User Database
-  mysql_user: name=root password=F@1zur@@studyroom2308000 host=localhost
+- name: Create database user
+  mysql_user: user=admin password=F@1zur@@studyroom2308000 priv=*.*:ALL state=resent
 
 - name: Create Database
-  mysql_db: name=splti state=present
+  mysql_db: db=splti state=present
