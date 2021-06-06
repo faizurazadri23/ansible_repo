@@ -6,4 +6,4 @@
   mysql_user: user=admin password=F@1zur@@studyroom2308000 priv=*.*:ALL state=resent
 
 - name: Create Database
-  mysql_db: db=splti state=present
+  mysql_db: db=splti state=absent
