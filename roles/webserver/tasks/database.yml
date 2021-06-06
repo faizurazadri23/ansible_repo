@@ -5,9 +5,9 @@
 - name: Create database user
   no_log: true
   mysql_user:
-      name: root
-      password: F@1zur@@studyroom2308000
-      priv: "database.*:ALL"
+      user: splti
+      password: splti@2020
+      priv=*.*:ALL
       state: present
       login_unix_socket: /var/lib/mysql/mysql.sock
 
