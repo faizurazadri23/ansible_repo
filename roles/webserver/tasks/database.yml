@@ -2,9 +2,6 @@
 - name: Install pip
   yum: name=python-pip state=present
 
-- name: Install libmysqlclient-dev
-  yum: name=libmysqlclient-dev state=present
-
 - name: Create database user
   mysql_user: user=admin password=F@1zur@@studyroom2308000 priv=*.*:ALL state=resent
 
