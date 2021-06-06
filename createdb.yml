@@ -1,0 +1,9 @@
+---
+- name: Install WebServer
+  hosts: webserver
+  gather_facts: false
+  become: true
+  tasks:
+  - import_role:
+     name: webserver
+     tasks_from: database
