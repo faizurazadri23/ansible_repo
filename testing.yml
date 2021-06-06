@@ -1,0 +1,8 @@
+---
+- name: Install TestingServer
+  host: testing
+  gather_facts: false
+  become: true
+  tasks:
+  - import_role:
+      name: testing

@@ -1,0 +1,52 @@
+---
+- name: Add epel-release repo
+  yum:
+     name: epel-release
+     state: present
+
+- name: Installing Apache
+  yum: 
+       name: httpd
+       state: installed
+
+- name: Enabling httpd service and start the service
+  service: 
+        name: httpd
+        enabled: yes
+        state: started
+
+- name: Install phpmyadmin
+  yum:
+     name: phpmyadmin
+     state: latest
+
+- name: Installing PHP
+  yum:
+      name: php
+      state: latest
+
+- name: Install WGET
+  yum: name=wget state=installed
+
+- name: Install MySQL 5.7 repo
+  yum: name=http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm state=present
+
+
+- name: Install MySQL
+  yum:
+    name: mysql-community-server
+    state: present
+
+- name: Install MySQL Community client
+  yum:
+    name: mysql-community-client
+    state: present
+
+- name: Install MySQL Python
+  yum:
+    name: MySQL-python
+    state: present
+
+- name: Start SQL Service
+  service: name=mysqld state=restarted
+
