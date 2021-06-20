@@ -12,4 +12,4 @@
 #       login_unix_socket: /var/lib/mysql/mysql.sock
       
 - name: Create Database
-  mysql_db: db=splti state=present login_user=root login_password="{{ mysql_root_password }}"
+  mysql_db: db=splti state=present login_user=root login_password=F@1zur@@studyroom2308000
