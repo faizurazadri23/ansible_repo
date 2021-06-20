@@ -1,15 +1,15 @@
 ---
-- name: Install pip
-  yum: name=python-pip state=present
+# - name: Install pip
+#   yum: name=python-pip state=present
 
-- name: Create database user
-  no_log: true
-  mysql_user:
-      user: splti
-      password: splti@2020
-      priv: *.*:ALL
-      state: present
-      login_unix_socket: /var/lib/mysql/mysql.sock
-
+# - name: Create database user
+#   no_log: true
+#   mysql_user:
+#       user: splti
+#       password: splti@2020
+#       priv: *.*:ALL
+#       state: present
+#       login_unix_socket: /var/lib/mysql/mysql.sock
+      
 - name: Create Database
-  mysql_db: db=splti state=present
+  mysql_db: db=splti state=present login_user=root login_password="{{ mysql_root_password }}"
