@@ -7,7 +7,7 @@
   mysql_user:
       user: splti
       password: splti@2020
-      priv=*.*:ALL
+      priv: *.*:ALL
       state: present
       login_unix_socket: /var/lib/mysql/mysql.sock
 
