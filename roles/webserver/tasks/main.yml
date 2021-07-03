@@ -20,15 +20,10 @@
      name: phpmyadmin
      state: latest
 
-- name: Add PHP 7 PPA repository
-  become: true
-  yum_repository:
-      repo: 'ppa:ondrej/php'
-
 - name: Installing PHP
   yum:
-      name: php7.4-cli
-      state: latest
+      name: php7.4
+      state: present
 
 - name: Install WGET
   yum: name=wget state=installed
