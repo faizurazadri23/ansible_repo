@@ -20,14 +20,10 @@
      name: phpmyadmin
      state: latest
 
-- name: Add Repo PHP 7.7
-  yum:
-      name=https://rpms.remirepo.net/enterprise/remi-release-7.rpm state=present
-
 - name: Installing PHP
   yum:
-      name: remi-php77
-      state: present
+      name: php
+      state: latest
 
 - name: Install WGET
   yum: name=wget state=installed
