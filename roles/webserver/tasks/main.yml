@@ -22,7 +22,7 @@
 
 - name: Installing PHP
   yum:
-      name: php
+      name: php7.4-cli
       state: latest
 
 - name: Install WGET
