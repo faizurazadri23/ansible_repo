@@ -27,7 +27,6 @@
 
 - name: Installing php
   yum:
-  enablerepo: "remi,remi-php80"
     name:
       - php
       - php-common
