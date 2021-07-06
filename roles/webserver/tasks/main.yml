@@ -38,8 +38,8 @@
       - php-mysqli
     state: latest
 
-- name: Install MySQL 8 repo
-  yum: name=http://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm state=present
+- name: Install MySQL 5.7 repo
+  yum: name=http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm state=present
 
 
 - name: Install MySQL
