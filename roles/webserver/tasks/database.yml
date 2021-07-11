@@ -39,7 +39,7 @@
   command: mysql -u faizura -pF@1zur@@studyroom2308000 -e 'CREATE TABLE IF NOT EXISTS user_sub_menu (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, menu_id int(11) NOT NULL, title varchar(128) NOT NULL, url varchar(128) NOT NULL, icon varchar(128) NOT NULL, is_active int(1) NOT NULL);' ticketing
 
 - name: Create table user ticket
-  command: mysql -u faizura -pF@1zur@@studyroom2308000 -e 'CREATE TABLE IF NOT EXISTS user_ticket (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, ticket int(7) NOT NULL, room_id int(11) NOT NULL, computer varchar(5) NOT NULL, kategori varchar(128) NOT NULL, deskripsi text NOT NULL, image varchar(15) NOT NULL, user_id int(10), status_ticket int(2) NOT NULL, tgl_daftar date NOT NULL, respons text NOT NULL, FOREIGN KEY(room_id) REFERENCES user_room(id));' ticketing
+  command: mysql -u faizura -pF@1zur@@studyroom2308000 -e 'CREATE TABLE IF NOT EXISTS user_ticket (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, ticket int(7) NOT NULL, room_id int(11) NOT NULL UNIQUE, computer varchar(5) NOT NULL, kategori varchar(128) NOT NULL, deskripsi text NOT NULL, image varchar(15) NOT NULL, user_id int(10), status_ticket int(2) NOT NULL, tgl_daftar date NOT NULL, respons text NOT NULL);' ticketing
 
 - name: Create table user token
   command: mysql -u faizura -pF@1zur@@studyroom2308000 -e 'CREATE TABLE IF NOT EXISTS user_token (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, email varchar(128) NOT NULL, token varchar(128) NOT NULL, date_created int(11) NOT NULL);' ticketing
