@@ -60,3 +60,9 @@
 - name: Start SQL Service
   service: name=mysqld state=restarted
 
+- name: Install Git
+  yum:
+     name: git
+     state: present
+     update_cache: yes
+
