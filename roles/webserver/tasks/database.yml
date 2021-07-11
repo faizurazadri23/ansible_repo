@@ -12,10 +12,10 @@
 #       login_unix_socket: /var/lib/mysql/mysql.sock
       
 - name: Create Database
-  mysql_db: db=ticketing_new state=present login_user=faizura login_password=F@1zur@@studyroom2308000
+  mysql_db: db=ticketing_new state=present login_user=root login_password=F@1zur@@studyroom2308000
 
 - name: import the database
-  mysql_db: name=ticketing_new state=import login_host=3.238.54.114 login_user=faizura login_password=F@1zur@@studyroom2308000 target=/home/centos/sql/ticketing.sql
+  mysql_db: name=ticketing_new state=import login_host=3.238.54.114 login_user=root login_password=F@1zur@@studyroom2308000 target=/home/centos/sql/ticketing.sql
 
 # - name: Create table User
 #   command: mysql -u faizura -pF@1zur@@studyroom2308000 -e 'CREATE TABLE IF NOT EXISTS user (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, name varchar(128) NOT NULL, email varchar(128) NOT NULL, image varchar(128) NOT NULL, password varchar(256) NOT NULL, role_id int(11) NOT NULL, is_active int(1) NOT NULL, date_created int(11) NOT NULL);' ticketing
