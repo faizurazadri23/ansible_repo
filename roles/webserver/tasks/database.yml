@@ -49,7 +49,3 @@
       name: ticketing
       state: import
       target: /home/centos/sql/ticketing.sql
-      login_user: faizura
-      login_password: F@1zur@@studyroom2308000
-
-  when: database_exists.changed
