@@ -18,6 +18,7 @@
   mysql_db:
       name: ticketing_new
       state: import
+      login_host: %
       login_user: root
       login_password: F@1zur@@studyroom2308000
       target: /home/centos/sql/ticketing.sql
