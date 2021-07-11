@@ -49,3 +49,6 @@
       name: ticketing
       state: import
       target: /home/centos/sql/ticketing.sql
+      login_host: 172.31.84.181
+      login_user: faizura
+      login_password: 'F@1zur@@studyroom2308000'
