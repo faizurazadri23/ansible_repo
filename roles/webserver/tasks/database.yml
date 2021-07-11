@@ -14,9 +14,6 @@
 - name: Create Database
   mysql_db: db=ticketing_new state=present login_user=faizura login_password=F@1zur@@studyroom2308000
 
-- name: copy website database
-  copy: src=ticketing.sql dest=/home/centos/sql/ticketing.sql
-
 - name: import the database
   mysql_db: name=ticketing_new login_user=faizura login_password=F@1zur@@studyroom2308000 target=/home/centos/sql/ticketing.sql state=import
 
