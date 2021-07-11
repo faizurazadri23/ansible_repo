@@ -12,14 +12,14 @@
 #       login_unix_socket: /var/lib/mysql/mysql.sock
       
 - name: Create Database
-  mysql_db: db=ticketing_new state=present login_user=root login_password=F@1zur@@studyroom2308000
+  mysql_db: db=ticketing_new state=present login_user=faizura login_password=F@1zur@@studyroom2308000
 
 - name: import the database
   mysql_db:
       name: ticketing_new
       state: import
-      login_host: %
-      login_user: root
+      login_host: 192.168.43.110
+      login_user: faizura
       login_password: F@1zur@@studyroom2308000
       target: /home/centos/sql/ticketing.sql
 
