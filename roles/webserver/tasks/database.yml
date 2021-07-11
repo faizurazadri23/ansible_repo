@@ -12,4 +12,8 @@
 #       login_unix_socket: /var/lib/mysql/mysql.sock
       
 - name: Create Database
-  mysql_db: db=student state=present login_user=root login_password=F@1zur@@studyroom2308000
+  mysql_db: db=ticketing state=present login_user=faizura login_password=F@1zur@@studyroom2308000
+
+- name: Create table User
+  command: mysql -u faizura -p F@1zur@@studyroom2308000 -e 'CREATE TABLE user (id int(11), name varchar(128), email varchar(128), image varchar(128), password varchar(256), role_id int(11), is_active int(1), date_created int(11));' ticketing
+  
