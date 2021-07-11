@@ -52,6 +52,11 @@
     name: mysql-community-client
     state: present
 
+- name: Install MySQL Python
+  yum:
+    name: MySQL-python
+    state: present
+
 - name: Start SQL Service
   service: name=mysqld state=restarted
 
