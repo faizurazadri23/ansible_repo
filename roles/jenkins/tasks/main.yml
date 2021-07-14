@@ -9,6 +9,12 @@
     name: java-1.8.0-openjdk
     state: present
 
+- name: Install Git
+  yum:
+     name: git
+     state: present
+     update_cache: yes
+
 - name: install firewalld
   yum:
     name: firewalld
