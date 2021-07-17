@@ -73,14 +73,14 @@
   become: yes
 
 - name: Install Docker
-    package:
-        name: docker-ce
-        state: latest
-    become: yes
+  package:
+      name: docker-ce
+      state: latest
+  become: yes
 
 - name: Start Docker service
-    service:
-        name: docker
-        state: started
-        enabled: yes
-    become: yes
+  service:
+      name: docker
+      state: started
+      enabled: yes
+  become: yes
